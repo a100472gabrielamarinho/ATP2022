@@ -1,0 +1,90 @@
+{
+ "cells": [
+  {
+   "cell_type": "markdown",
+   "id": "1e545158",
+   "metadata": {},
+   "source": [
+    "# Resolução do TPC 2\n",
+    "### Semana de 26 a 30 de Setembro de 2022\n",
+    "### Gabriela Marinho_a100472\n",
+    "### Versão em que é o utilizador a adivinhar"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "81703f1b",
+   "metadata": {},
+   "source": [
+    "### TPC2: Adivinha o número\n",
+    "- Crie um programa em Python para jogar o jogo \"Adivinha o número\":\n",
+    "    - O jogo pode ter 2 modalidades: computador pensa num número (entre 0 e 100), utilizador tenta adivinhar; ou, o utilizador pensa num número (entre 0 e 100) e o computador tenta adivinhar;\n",
+    "    - Quem tenta adivinhar responde com uma das afirmações: \"Acertou\", \"O número que pensei é Maior\" ou \"O número que pensei é Menor\";\n",
+    "    - Uma vez descoberto o número o programa deverá terminar imprimindo o número de tentativas que quem adivinhou usou para chegar ao resultado."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 5,
+   "id": "f8658c5c",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "Acertou!\n",
+      "Número de tentativas gastas: 11\n"
+     ]
+    }
+   ],
+   "source": [
+    "#Computador vai sortear um número:\n",
+    "import random\n",
+    "num = random.randrange(1,101)\n",
+    "\n",
+    "#Vou inserir a minha tentativa inicial:\n",
+    "numero= int(input(\"adivinha o número entre 0 e 100\"))\n",
+    "i=0\n",
+    "\n",
+    "#se não acertar à primeira:\n",
+    "while num != numero:\n",
+    "    if num < numero:\n",
+    "        numero=int(input(\"O número que pensei é Menor\"))\n",
+    "        i = i + 1\n",
+    "    else:\n",
+    "        numero=int(input(\"O número que pensei é Maior! \"))\n",
+    "        i = i + 1\n",
+    "\n",
+    "#Acertando dá-me o número de tentativas:\n",
+    "print(\"Acertou!\\nNúmero de tentativas gastas:\",i)"
+   ]
+  }
+ ],
+ "metadata": {
+  "kernelspec": {
+   "display_name": "Python 3.10.7 64-bit",
+   "language": "python",
+   "name": "python3"
+  },
+  "language_info": {
+   "codemirror_mode": {
+    "name": "ipython",
+    "version": 3
+   },
+   "file_extension": ".py",
+   "mimetype": "text/x-python",
+   "name": "python",
+   "nbconvert_exporter": "python",
+   "pygments_lexer": "ipython3",
+   "version": "3.10.7"
+  },
+  "vscode": {
+   "interpreter": {
+    "hash": "b1be5a1e9e85905d3e4e97ef1b769f5caa870a8a58c9f9e0ae488b6f0a0e1baf"
+   }
+  }
+ },
+ "nbformat": 4,
+ "nbformat_minor": 5
+}
