@@ -20,7 +20,7 @@ def curso2(aluno):
 
 def cursoo(aluno):
     dic = {}
-    for nr,nome,curso,nota1,nota2,nota3,nota4, media in aluno:
+    for nr,nome,curso,nota1,nota2,nota3,nota4 in aluno:
         if curso not in dic:
             dic[curso] = 1
         else:
@@ -83,7 +83,8 @@ import matplotlib.pyplot as plt
 def graficoLINHAS(distrib):
     eixox = list(distrib.values())
     eixoy = list(distrib.keys())
-    plt.barh(eixoy,eixox,color="blue") 
+    plt.barh(eixoy,eixox,color="blue")
+    plt.show() 
     return 
 
 #tabela de uma distribuição:
